@@ -45,16 +45,20 @@ while run:
     if dir != 0:
         if dir == 3:
             frame_y = 3
-            pos_y -= 10
+            if pos_y > 30:
+                pos_y -= 10
         elif dir == 4:
             frame_y = 0
-            pos_y += 10
+            if pos_y < 569:
+                pos_y += 10
         elif dir == 2:
             frame_y = 2
-            pos_x += 10
+            if pos_x < 779:
+                pos_x += 10
         elif dir == 1:
             frame_y = 1
-            pos_x -= 10
+            if pos_x > 20:
+                pos_x -= 10
         frame_x = (frame_x + 1) % 4
     delay(0.05)
 
